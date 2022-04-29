@@ -1,13 +1,136 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quicksand', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 10px;
+}
+
+.navbar-button-pro, .box > button {
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 10px;
+  cursor: pointer;
+  background-color: cadetblue;
+  color: white;
+}
+
+.navbar-button-pro {
+  margin-left: auto;
+}
+
+.navbar-logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar-button {
+  font-family: 'Quicksand', sans-serif;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  color: #6669;
+}
+
+.switch {
+  width: 25px;
+  height: 15px;
+  background-color: #6669;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50px;
+  padding: 1px 2px;
+  cursor: pointer;
+}
+
+.switch[value="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.model3d {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rigth-info {
+  height: 330px;
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template: 1fr 4fr / 3fr 2fr;
+  grid-template-areas: 
+  "img title"
+  "img text";
+}
+
+.left-info {
+  background-color: rgb(15, 15, 15);
+  color: white;
+  height: 330px;
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template: 1fr 4fr / 2fr 3fr;
+  grid-template-areas: 
+    "title img"
+    "text img";
+}
+
+.description-image {
+  grid-area: img;
+}
+
+.description-title {
+  grid-area: title;
+  align-self: center;
+  text-align: center;
+}
+
+.description-text {
+  grid-area: text;
+  align-self: center;
+  text-align: center;
+}
+
+.boxes {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-auto-rows: 250px;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.box {
+  border: solid 1px rgb(152, 152, 152);
+  box-shadow: 2px 2px 6px 0px rgb(152, 152, 152);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: center;
 }
